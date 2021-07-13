@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "titillium";
+  src: url('../fonts/titilliumweb_regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "titillium";
+  src: url('../fonts/titilliumweb_italic.ttf') format('ttf');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "titillium";
+  src: url('../fonts/titilliumweb_semibold.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "titillium";
+  src: url('../fonts/titilliumweb_bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+.body {
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'titillium', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #959393;
+  background-color: #ffffff;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .body {
+    width: 100%;
+  }
+}
