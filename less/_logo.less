@@ -1,0 +1,49 @@
+@import "mix.less";
+
+.logo {
+  display: flex;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 10px;
+  font-weight: 700;
+  letter-spacing: 0.002em;
+
+  &:hover {
+    & .logo__text {
+      color: #858688;
+    }
+
+    & .logo__title {
+      color: #5b4295;
+    }
+  }
+
+  &:active {
+
+    & .logo__text,
+    & .logo__title {
+      color: #454545;
+    }
+  }
+
+  &__text {
+    color: #5b4295;
+  }
+
+  &__title {
+    color: #858688;
+  }
+}
+
+@media (min-width: 650px) {
+  .logo {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1088px) {
+  .logo {
+    font-size: 30px;
+    line-height: 14px;
+  }
+}

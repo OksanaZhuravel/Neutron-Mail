@@ -1,0 +1,83 @@
+@import "mix.less";
+
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  line-height: 56px;
+
+  &__logo {
+    margin: 5px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  &__lang {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__list {}
+
+  &__item {
+    color: #959595;
+    margin: 0 0 0 15px;
+
+    &::after {
+      content: "/";
+      margin: 0 0 0 15px;
+    }
+
+    &:active {
+      font-weight: 700;
+    }
+
+    &--activ {
+      font-weight: 700;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__title {
+    opacity: 0.83;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #454545;
+  }
+
+  &__caption {
+    font-size: 36px;
+    color: #464646;
+  }
+
+  &__subtitle {
+    font-size: 36px;
+    color: #fc2028;
+  }
+
+
+  &__account {}
+
+  &__link {}
+
+  &__items {}
+
+  &__text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+}
