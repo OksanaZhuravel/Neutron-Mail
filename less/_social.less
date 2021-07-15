@@ -1,13 +1,38 @@
 @import "mix.less";
 
 .social {
-  &__item {}
+  opacity: 0.81;
+  font-family: 'Font Awesome';
+  font-size: 22px;
+  line-height: 37px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #454545;
+
+  &__item {
+    list-style: none;
+  }
 
   &__link {
-    &--facebook {}
-
-    &--gogle {}
-
-    &--twitter {}
+    text-decoration: none;
   }
+}
+
+.icon {
+
+  &-gplus-squared,
+  &-facebook-official,
+  &-twitter-squared {
+    color: #454545;
+
+    &:hover {
+      color: #5f2966;
+    }
+
+    &:active {
+      color: #f50707;
+    }
+  }
+
+
 }

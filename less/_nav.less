@@ -3,11 +3,20 @@
 .nav {
   background-color: #ffffff;
 
+  &__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 45px 200px 0 0;
+  }
+
   &__list {
     display: flex;
     flex-flow: row wrap;
     list-style-type: none;
     padding: 0;
+    margin: 0;
+
 
     // &--mobily {
     //   visibility: hidden;
@@ -22,6 +31,18 @@
   &__item {
     margin: 0 30px 0 0;
     position: relative;
+
+    &--sing {
+      margin-right: 0;
+    }
+
+    &--last {
+      margin-right: 75px;
+    }
+
+    &--user {
+      margin-right: 45px;
+    }
   }
 
   &__link {
@@ -52,6 +73,7 @@
     display: flex;
     flex-flow: row wrap;
     padding: 0;
+    margin: 0;
     list-style-type: none;
   }
 

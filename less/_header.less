@@ -1,24 +1,26 @@
 @import "mix.less";
 
 .header {
+  // display: flex;
   width: 100%;
+  text-align: center;
   background-color: #ffffff;
   line-height: 56px;
+  position: relative;
 
   &__logo {
-    margin: 5px;
+    margin: 85px 0 28px 200px;
   }
 
   &__nav {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    width: 100%;
   }
 
   &__lang {
     display: flex;
     flex-flow: row wrap;
-    margin: 0;
+    margin: 0 0 173px 200px;
     padding: 0;
     list-style: none;
   }
@@ -44,13 +46,19 @@
   }
 
   &__social {
+    position: absolute;
+    right: 34px;
+    top: 323px;
     display: flex;
     flex-flow: column wrap;
+    align-content: flex-end;
     margin: 0;
     padding: 0;
   }
 
   &__title {
+    width: 100%;
+    margin: 0;
     opacity: 0.83;
     font-size: 60px;
     line-height: 1.2;
@@ -69,15 +77,113 @@
   }
 
 
-  &__account {}
+  &__account {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 79px 0 331px 0;
+  }
 
-  &__link {}
+  &__items {
+    margin: 0 25px 0 0;
+    width: 46px;
+    height: 46px;
+    // opacity: 0.8;
+    background-color: #5f2966;
+    background: linear-gradient(to right, #636c93, #5f316b);
+    border-radius: 50%;
 
-  &__items {}
+    &:hover {
+      width: 246px;
+      height: 56px;
+      border-radius: 28px;
+
+      .icon-apple,
+      .icon-user-plus {
+        visibility: hidden;
+      }
+
+      & .header__link--google {
+        &::before {
+          display: none;
+        }
+      }
+
+      .header__text {
+        visibility: visible;
+      }
+    }
+
+    &--hover {
+      width: 246px;
+      height: 56px;
+      border-radius: 28px;
+    }
+  }
+
+
+  &__link {
+    display: block;
+    // width: 46px;
+    // height: 46px;
+    // width: 20px;
+    // height: 22px;
+    text-decoration: none;
+
+    &::before {
+      content: " ";
+      display: block;
+      width: 20px;
+      height: 22px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 12px 12px 12px 14px;
+    }
+
+    &--user {
+      &::before {
+        background-image: url(../img/account_1.png);
+        // margin: 12px 12px 12px 14px;
+      }
+    }
+
+    &--apple {
+      &::before {
+        background-image: url(../img/account_2.png);
+        // margin: 12px 12px 12px 14px;
+      }
+    }
+
+    &--google {
+      &::before {
+        background-image: url(../img/account_3.png);
+        // margin: 12px 12px 12px 14px;
+      }
+    }
+  }
 
   &__text {
+    visibility: hidden;
     font-size: 18px;
     font-weight: 700;
     color: #ffffff;
+  }
+}
+
+.icon-apple,
+.icon-user-plus {
+  visibility: visible;
+  font-size: 22px;
+  line-height: 37px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+
+  &::before {
+    margin: 12px;
   }
 }

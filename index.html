@@ -11,71 +11,74 @@
 
   <body class="body">
     <header class="header">
-      <a href="#" class="header__logo logo">
-        <span class="logo__title">neutron</span>
-        <span class="logo__text">Mail</span></a>
       <nav class="header__nav nav menu">
-        <input type="checkbox" class="menu__input" id="menu">
-        <label for="menu" class="menu__label"><span class="menu__btn"></span></label>
-        <ul class="nav__list nav__list--mobily">
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <span class="nav__text">About</span></a></li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <span class="nav__text">Security</span></a></li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <span class="nav__text">Blog</span></a></li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <span class="nav__text">Careers</span></a></li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <span class="nav__text">Support</span></a></li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <span class="nav__text">Donate</span></a></li>
-        </ul>
-        <ul class="nav__user">
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <span class="nav__text">Log in</span></a>
-            <ul class="nav__log">
-              <li class="nav__form">
-                <h3 class="visually-hidden">Personal Area</h3>
-                <form action="#" class="nav__form" method="post">
-                  <label for="login__email" class="nav__style visually-hidden">Email</label>
-                  <input class="nav__style" type="email" name="login__email" id="login__email" placeholder="Your Email">
-                  <label for="login__password" class="nav__style visually-hidden">Password</label>
-                  <input class="nav__style" type="password" name="login__password" id="login__password"
-                    placeholder="Your Password">
-                  <span class="nav__new--text"><a href="#" class="nav__new">Forgot your password?</a></span>
-                  <button class="nav__btn" type="submit" value="Log">Log in</button>
-                </form>
-              </li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <span class="nav__text nav__text--sing">Sign up</span></a>
-            <ul class="nav__sign">
-              <li class="nav__form">
-                <h3 class="visually-hidden">New registration</h3>
-                <form action="#" class="nav__form" method="post">
-                  <label for="name" class="nav__style visually-hidden">Your Name</label>
-                  <input type="text" class="nav__style" id="name" name="name" placeholder="Your Name">
-                  <label for="sign__email" class="nav__style visually-hidden">Email</label>
-                  <input class="nav__style" type="email" name="sign__email" id="sign__email" placeholder="Your Email">
-                  <label for="sign__password" class="nav__style visually-hidden">Password</label>
-                  <input class="nav__style" type="password" name="sign__password" id="sign__password"
-                    placeholder="Your Password">
-                  <button class="nav__btn" type="submit" value="Sign">Sign up</button>
-                </form>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <a href="#" class="header__logo logo">
+          <span class="logo__title">neutron</span>
+          <span class="logo__text">Mail</span></a>
+        <div class="nav__wrap">
+          <input type="checkbox" class="menu__input" id="menu">
+          <label for="menu" class="menu__label"><span class="menu__btn"></span></label>
+          <ul class="nav__list nav__list--mobily">
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <span class="nav__text">About</span></a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <span class="nav__text">Security</span></a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <span class="nav__text">Blog</span></a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <span class="nav__text">Careers</span></a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <span class="nav__text">Support</span></a></li>
+            <li class="nav__item nav__item--last">
+              <a href="#" class="nav__link">
+                <span class="nav__text">Donate</span></a></li>
+          </ul>
+          <ul class="nav__user">
+            <li class="nav__item nav__item--user">
+              <a href="#" class="nav__link icon-login">
+                <span class="nav__text">Log in</span></a>
+              <ul class="nav__log">
+                <li class="nav__form">
+                  <h3 class="visually-hidden">Personal Area</h3>
+                  <form action="#" class="nav__form" method="post">
+                    <label for="login__email" class="nav__style visually-hidden">Email</label>
+                    <input class="nav__style" type="email" name="login__email" id="login__email"
+                      placeholder="Your Email">
+                    <label for="login__password" class="nav__style visually-hidden">Password</label>
+                    <input class="nav__style" type="password" name="login__password" id="login__password"
+                      placeholder="Your Password">
+                    <span class="nav__new--text"><a href="#" class="nav__new">Forgot your password?</a></span>
+                    <button class="nav__btn" type="submit" value="Log">Log in</button>
+                  </form>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item nav__item--sing">
+              <a href="#" class="nav__link">
+                <span class="nav__text nav__text--sing">Sign up</span></a>
+              <ul class="nav__sign">
+                <li class="nav__form">
+                  <h3 class="visually-hidden">New registration</h3>
+                  <form action="#" class="nav__form" method="post">
+                    <label for="name" class="nav__style visually-hidden">Your Name</label>
+                    <input type="text" class="nav__style" id="name" name="name" placeholder="Your Name">
+                    <label for="sign__email" class="nav__style visually-hidden">Email</label>
+                    <input class="nav__style" type="email" name="sign__email" id="sign__email" placeholder="Your Email">
+                    <label for="sign__password" class="nav__style visually-hidden">Password</label>
+                    <input class="nav__style" type="password" name="sign__password" id="sign__password"
+                      placeholder="Your Password">
+                    <button class="nav__btn" type="submit" value="Sign">Sign up</button>
+                  </form>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </nav>
       <ul class="header__lang">
         <li class="header__list"><span class="header__item header__item--activ">English </span></li>
@@ -85,19 +88,25 @@
       </ul>
       <ul class="header__social social">
         <li class="social__item">
-          <a href="#" class="social__link social__link--gogle"><span class="visually-hidden">Google</span></a></li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--facebook"><span class="visually-hidden">Facebook</span></a></li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--twitter"><span class="visually-hidden">Twitter</span></a></li>
-      </ul>
-      <h1 class="header__title">Secure Email Communication
-        <span class="header__caption">Based in </span><span class="header__subtitle">Somewhere</span></h1>
-      <ul class="header__account">
-        <li class="header__items"><a href="#" class="header__link"><span class="header__text">Create account</span></a>
+          <a href="#" class="social__link icon-gplus-squared"><span class="visually-hidden">Google</span></a>
         </li>
-        <li class="header__items"><a href="#" class="header__link"><span class="header__text">App store</span></a></li>
-        <li class="header__items"><a href="#" class="header__link"><span class="header__text">Google play</span></a>
+        <li class="social__item">
+          <a href="#" class="social__link icon-facebook-official"><span class="visually-hidden">Facebook</span></a></li>
+        <li class="social__item">
+          <a href="#" class="social__link icon-twitter-squared"><span class="visually-hidden">Twitter</span></a></li>
+      </ul>
+      <h1 class="header__title">Secure Email Communication</h1>
+      <span class="header__caption">Based in </span>
+      <span class="header__subtitle">Somewhere</span>
+      <ul class="header__account">
+        <li class="header__items header__items--hover"><a href="#"
+            class="header__link header__link--user header__link--hover"><span class="header__text">Create
+              account</span></a>
+        </li>
+        <li class="header__items"><a href="#" class="header__link header__link--apple"><span class="header__text">App
+              store</span></a></li>
+        <li class="header__items"><a href="#" class="header__link header__link--google"><span
+              class="header__text">Google play</span></a>
         </li>
       </ul>
     </header>
@@ -166,8 +175,8 @@
         <h3 class="privacy__title">Privacy is a fundamental human right.</h3>
         <span class="privacy__text">Your support helps us to protect privacy world-wide.</span>
         <div class="privacy__wrap">
-          <a href="#" class="privacy__link"><span class="privacy__txt">Upgrade to Paid Plan</span></a>
-          <a href="#" class="privacy__link"><span class="privacy__txt">Donate</span></a></div>
+          <a href="#" class="privacy__link icon-upload-cloud"><span class="privacy__txt">Upgrade to Paid Plan</span></a>
+          <a href="#" class="privacy__link icon-dollar"><span class="privacy__txt">Donate</span></a></div>
       </section>
       <section class="services">
         <h3 class="services__title">Those, who help us secure your privacy</h3>
