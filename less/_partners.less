@@ -1,5 +1,23 @@
 @import "mix.less";
 
 .partners {
-  &__link {}
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  width: 100%;
+
+
+  &--fon {
+    margin: 0 0 61px 21px;
+    height: 66px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url("../img/partners__fon.png");
+  }
+
+  &__link {
+    display: block;
+    width: 165px;
+  }
 }

@@ -1,9 +1,75 @@
 @import "mix.less";
 
 .types {
-  &__subtitle {}
+  position: relative;
+  max-width: 455px;
+  min-width: 240px;
 
-  &__text {}
 
-  &__title {}
+  &__title {
+    margin: 20px 0 3px 0;
+    font-size: 30px;
+    line-height: 37px;
+    color: #555555;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--privacy {
+      &::after {
+        width: 67px;
+        height: 68px;
+        left: 35px;
+        background-image: url(../img/types1.png);
+      }
+    }
+
+    &--encryption {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -94px;
+        left: -33px;
+        width: 1px;
+        height: 210px;
+        background-color: #b9b9b9;
+      }
+
+      &::after {
+        width: 95px;
+        height: 74px;
+        top: 5px;
+        background-image: url(../img/types2.png);
+      }
+    }
+
+    &--anonymous {
+      &::after {
+        width: 70px;
+        height: 60px;
+        left: 15px;
+        background-image: url(../img/types3.png);
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  &__text {
+    text-align: left;
+    margin: 34px 0 0 0;
+    width: 80%;
+  }
 }

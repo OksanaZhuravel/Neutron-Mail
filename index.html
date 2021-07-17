@@ -10,7 +10,7 @@
   </head>
 
   <body class="body">
-    <header class="header">
+    <header class="header header__fon">
       <nav class="header__nav nav menu">
         <a href="#" class="header__logo logo">
           <span class="logo__title">neutron</span>
@@ -81,7 +81,7 @@
         </div>
       </nav>
       <ul class="header__lang">
-        <li class="header__list"><span class="header__item header__item--activ">English </span></li>
+        <li class="header__list header__list--activ"><span class="header__item">English </span></li>
         <li class="header__list"><span class="header__item">French </span></li>
         <li class="header__list"><span class="header__item">Italian</span></li>
         <li class="header__list"><span class="header__item">Polish</span></li>
@@ -99,46 +99,49 @@
       <span class="header__caption">Based in </span>
       <span class="header__subtitle">Somewhere</span>
       <ul class="header__account">
-        <li class="header__items header__items--hover"><a href="#"
-            class="header__link header__link--user header__link--hover"><span class="header__text">Create
-              account</span></a>
+        <li class="header__items header__item--user header__items--hover">
+          <a href="#" class="header__link header__link--user"><span class="header__text">Create account</span></a>
         </li>
-        <li class="header__items"><a href="#" class="header__link header__link--apple"><span class="header__text">App
-              store</span></a></li>
-        <li class="header__items"><a href="#" class="header__link header__link--google"><span
-              class="header__text">Google play</span></a>
+        <li class="header__items header__item--apple">
+          <a href="#" class="header__link header__link--apple"><span class="header__text">App store</span></a></li>
+        <li class="header__items header__item--google">
+          <a href="#" class="header__link header__link--google"><span class="header__text">Google play</span></a>
         </li>
       </ul>
     </header>
     <main>
       <section class="security">
-        <article class="security__types types">
-          <h3 class="types__title">Swiss Privacy</h3>
-          <span class="types__subtitle">Data Security and Neutrality</span>
-          <p class="types__text">NeutronMail is incorporated in Somewhere and all our servers are located in
-            Switzerland. This means all user data is protected by strict Swiss privacy laws.</p>
-        </article>
-        <article class="security__types types">
-          <h3 class="types__title">Double Encryption</h3>
-          <span class="types__subtitle">Automatic Email Security</span>
-          <p class="types__text">All emails are secured automatically with end-to-end encryption. This means even we
-            cannot decrypt and read your emails. As a result, your encrypted emails cannot be shared with third parties.
-          </p>
-        </article>
-        <article class="security__types types">
-          <h3 class="types__title">Anonymous Email</h3>
-          <span class="types__subtitle">Protect Your Privacy</span>
-          <p class="types__text">No personal information is required to create your secure email account. By default,
-            we do not keep any IP logs which can be linked to your anonymous email account. Your privacy comes first.
-          </p>
-        </article>
+        <div class="security__wrap">
+          <article class="security__types types">
+            <h3 class="types__title types__title--privacy">Swiss Privacy</h3>
+            <span class="types__subtitle">Data Security and Neutrality</span>
+            <p class="types__text">NeutronMail is incorporated in Somewhere and all our servers are located in
+              Switzerland. This means all user data is protected by strict Swiss privacy laws.</p>
+          </article>
+          <article class="security__types types">
+            <h3 class="types__title types__title--encryption">Double Encryption</h3>
+            <span class="types__subtitle">Automatic Email Security</span>
+            <p class="types__text">All emails are secured automatically with end-to-end encryption. This means even we
+              cannot decrypt and read your emails. As a result, your encrypted emails cannot be shared with third
+              parties.
+            </p>
+          </article>
+          <article class="security__types types">
+            <h3 class="types__title types__title--anonymous">Anonymous Email</h3>
+            <span class="types__subtitle">Protect Your Privacy</span>
+            <p class="types__text">No personal information is required to create your secure email account. By default,
+              we do not keep any IP logs which can be linked to your anonymous email account. Your privacy comes first.
+            </p>
+          </article>
+        </div>
         <h2 class="security__title">Physical Security</h2>
-        <span class="security__text">NeutronMail's infrastructure resides in Europe's<span
-            class="security__text--selection">most secure </span>datacenter, underneath 1000 meters of solid
-          rock.</span><a href="#" class="security__btn"><span class="security__txt">Learn more about our security
+        <span class="security__text">NeutronMail's infrastructure resides in Europe's
+          <span class="security__text--selection">most secure </span>datacenter, underneath 1000 meters of solid
+          rock.</span>
+        <a href="#" class="security__btn"><span class="security__txt">Learn more about our security
             features</span></a>
       </section>
-      <section class="partners">
+      <section class="partners partners--fon">
         <h3 class="visually-hidden">Partners</h3>
         <a href="#" class="partners__link"><span class="visually-hidden">Wall street journal</span></a>
         <a href="#" class="partners__link"><span class="visually-hidden">The new york times</span></a>
@@ -297,6 +300,7 @@
       <span class="footer__copy">&copy; 2017 <a href="#" class="footer__link">Neutron Technologies AG.</a> All Rights
         Reserved.</span>
     </footer>
+    <!-- <script src="js/header.js"></script> -->
   </body>
 
 </html>

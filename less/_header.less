@@ -4,12 +4,23 @@
   // display: flex;
   width: 100%;
   text-align: center;
-  background-color: #ffffff;
   line-height: 56px;
   position: relative;
 
+  &__fon {
+    min-height: 889px;
+    background-color: #ffffff;
+    background-image: url(../img/header__fon.png),
+      url(../img/header__fon1.png),
+      url(../img/header__fon2.png),
+      url(../img/header__fon3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0, 0 315px, 0 50px, 0 512px;
+  }
+
   &__logo {
-    margin: 85px 0 28px 200px;
+    margin: 82px 0 28px 200px;
   }
 
   &__nav {
@@ -20,15 +31,52 @@
   &__lang {
     display: flex;
     flex-flow: row wrap;
-    margin: 0 0 173px 200px;
+    margin: 0 0 135px 200px;
     padding: 0;
     list-style: none;
   }
 
-  &__list {}
+  &__list {
+    color: #959595;
+
+    &::after {
+      content: "";
+      display: none;
+      width: 46px;
+      height: 1px;
+      opacity: 0.41;
+      background-color: #647397;
+      margin: -15px 0 0 15px;
+    }
+
+    &:hover {
+      font-weight: 700;
+    }
+
+    &:active {
+      font-weight: 700;
+
+      &::after {
+        display: block;
+      }
+    }
+
+    &--activ {
+      font-weight: 700;
+
+      &::after {
+        display: block;
+      }
+    }
+
+    &:last-child>span {
+      &::after {
+        content: "";
+      }
+    }
+  }
 
   &__item {
-    color: #959595;
     margin: 0 0 0 15px;
 
     &::after {
@@ -36,14 +84,8 @@
       margin: 0 0 0 15px;
     }
 
-    &:active {
-      font-weight: 700;
-    }
-
-    &--activ {
-      font-weight: 700;
-    }
   }
+
 
   &__social {
     position: absolute;
@@ -101,12 +143,7 @@
       height: 56px;
       border-radius: 28px;
 
-      .icon-apple,
-      .icon-user-plus {
-        visibility: hidden;
-      }
-
-      & .header__link--google {
+      & .header__link {
         &::before {
           display: none;
         }
@@ -121,16 +158,22 @@
       width: 246px;
       height: 56px;
       border-radius: 28px;
+
+      & .header__link {
+        &::before {
+          display: none;
+        }
+      }
+
+      .header__text {
+        visibility: visible;
+      }
     }
   }
 
 
   &__link {
     display: block;
-    // width: 46px;
-    // height: 46px;
-    // width: 20px;
-    // height: 22px;
     text-decoration: none;
 
     &::before {
@@ -147,21 +190,18 @@
     &--user {
       &::before {
         background-image: url(../img/account_1.png);
-        // margin: 12px 12px 12px 14px;
       }
     }
 
     &--apple {
       &::before {
         background-image: url(../img/account_2.png);
-        // margin: 12px 12px 12px 14px;
       }
     }
 
     &--google {
       &::before {
         background-image: url(../img/account_3.png);
-        // margin: 12px 12px 12px 14px;
       }
     }
   }
@@ -171,19 +211,5 @@
     font-size: 18px;
     font-weight: 700;
     color: #ffffff;
-  }
-}
-
-.icon-apple,
-.icon-user-plus {
-  visibility: visible;
-  font-size: 22px;
-  line-height: 37px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: #ffffff;
-
-  &::before {
-    margin: 12px;
   }
 }

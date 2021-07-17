@@ -1,11 +1,37 @@
 @import "mix.less";
 
 .services {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  align-content: center;
+
   &__item {}
 
-  &__link {}
+  &__link {
+    text-decoration: none;
+    display: block;
+    width: 130px;
+  }
 
-  &__list {}
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 974px;
+    height: 92px;
+    opacity: 0.76;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url("../img/services__fon.png");
+  }
 
-  &__title {}
+  &__title {
+    margin: 22px 60px 5px 0;
+    line-height: 26px;
+    color: #7a7a7a;
+  }
 }
