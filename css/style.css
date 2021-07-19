@@ -1066,3 +1066,172 @@ input[type="radio"].visually-hidden {
   height: 441px;
   background-color: #b9b9b9;
 }
+.contact {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.contact__list {
+  list-style: none;
+  padding: 0;
+  margin: 100px 0 108px 0;
+  color: #5c5c5c;
+  text-align: end;
+  z-index: 3;
+}
+.contact__list--general {
+  margin-left: 120px;
+  margin-right: 414px;
+  text-align: left;
+}
+.contact__list--company {
+  margin-right: 113px;
+}
+.contact__list--legal {
+  margin-right: 94px;
+}
+.contact__list--mail {
+  margin-right: 427px;
+}
+.contact__item {
+  max-width: 300px;
+  margin: 0 0 5px 0;
+  position: relative;
+}
+.contact__item--general {
+  margin-top: 30px;
+}
+.contact__item--company {
+  margin: 0 0 30px 0;
+}
+.contact__item--legal {
+  margin: 0 0 30px 0;
+}
+.contact__item--mail {
+  margin: 0 0 30px 0;
+}
+.contact__text {
+  font-size: 14px;
+  font-weight: 400;
+}
+.contact__text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  width: 4px;
+  height: 4px;
+  background-color: #5c5c5c;
+  border-radius: 50%;
+}
+.contact__text--general::after {
+  display: none;
+}
+.contact__text--name {
+  text-align: end;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 700;
+  color: #5c5c5c;
+}
+.contact__text--name::after {
+  display: none;
+}
+.contact__text--name:hover {
+  color: #fc2028;
+}
+.contact__link {
+  text-decoration: none;
+  color: #5c5c5c;
+}
+.contact__link:hover {
+  color: #5b4295;
+}
+.contact__link:hover .contact__text::after {
+  background-color: #5b4295;
+}
+.contact__email {
+  text-decoration: none;
+  color: #5c5c5c;
+  font-weight: 700;
+}
+.contact__email:hover {
+  color: #5b4295;
+  text-decoration: underline;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #ffffff;
+  z-index: 1;
+  font-size: 12px;
+  line-height: 23px;
+  color: #5c5c5c;
+}
+.footer__fon {
+  position: relative;
+}
+.footer__fon::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 447px;
+  opacity: 0.56;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url(../img/footer__fon.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 0;
+}
+.footer__breadcrumbs {
+  margin: 0 0 19px 200px;
+  display: flex;
+  flex-flow: row wrap;
+  z-index: 2;
+}
+.footer__copy {
+  margin: 0 0 33px 200px;
+  z-index: 2;
+}
+.footer__link {
+  color: #5c5c5c;
+  text-decoration: none;
+  z-index: 2;
+}
+.footer__link:hover {
+  color: #5b4295;
+}
+.footer__link:active {
+  color: #fc2028;
+}
+.breadcrumbs {
+  list-style: none;
+  padding: 0;
+}
+.breadcrumbs__text {
+  margin: 0 0 0 15px;
+  font-size: 12px;
+  line-height: 23px;
+  text-decoration: underline;
+  color: #5c5c5c;
+}
+.breadcrumbs__text:active {
+  color: #fc2028;
+}
+.breadcrumbs__text:hover {
+  color: #5b4295;
+}
+.breadcrumbs__text::after {
+  content: "/";
+  margin: 0 0 0 15px;
+}
+.breadcrumbs__text--reddit::after {
+  content: " ";
+}

@@ -1,19 +1,35 @@
-@import "mix.less";
-
 .breadcrumbs {
+  list-style: none;
+  padding: 0;
+
   &__item {}
 
-  &__link {
-    &--facebook {}
+  &__link {}
 
-    &--forum {}
+  &__text {
+    margin: 0 0 0 15px;
+    font-size: 12px;
+    line-height: 23px;
+    text-decoration: underline;
+    color: #5c5c5c;
 
-    &--google {}
+    &:active {
+      color: #fc2028;
+    }
 
-    &--reddit {}
+    &:hover {
+      color: #5b4295;
+    }
 
-    &--twitter {}
+    &::after {
+      content: "/";
+      margin: 0 0 0 15px;
+    }
+
+    &--reddit {
+      &::after {
+        content: " ";
+      }
+    }
   }
-
-  &__text {}
 }

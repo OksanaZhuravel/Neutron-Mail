@@ -1,39 +1,121 @@
-@import "mix.less";
-
 .contact {
-  &__email {}
-
-  &__item {
-    &--company {}
-
-    &--legal {}
-
-    &--mail {}
-  }
-
-  &__link {
-    &--company {}
-
-    &--legal {}
-
-    &--mail {}
-  }
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 
   &__list {
-    &--company {}
+    list-style: none;
+    padding: 0;
+    margin: 100px 0 108px 0;
+    color: #5c5c5c;
+    text-align: end;
+    z-index: 3;
 
-    &--legal {}
+    &--general {
+      margin-left: 120px;
+      margin-right: 414px;
+      text-align: left;
+    }
 
-    &--mail {}
+    &--company {
+      margin-right: 113px;
+    }
+
+    &--legal {
+      margin-right: 94px;
+    }
+
+    &--mail {
+      margin-right: 427px;
+    }
+  }
+
+  &__item {
+    max-width: 300px;
+    margin: 0 0 5px 0;
+    position: relative;
+
+    &--general {
+      margin-top: 30px;
+    }
+
+    &--company {
+      margin: 0 0 30px 0;
+    }
+
+    &--legal {
+      margin: 0 0 30px 0;
+    }
+
+    &--mail {
+      margin: 0 0 30px 0;
+    }
   }
 
   &__text {
-    &--company {}
+    font-size: 14px;
+    font-weight: 400;
 
-    &--legal {}
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: -10px;
+      width: 4px;
+      height: 4px;
+      background-color: #5c5c5c;
+      border-radius: 50%;
+    }
 
-    &--mail {}
+    &--general {
+      &::after {
+        display: none;
+      }
+    }
 
-    &--name {}
+    &--name {
+      text-align: end;
+      font-size: 18px;
+      line-height: 23px;
+      font-weight: 700;
+      color: #5c5c5c;
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        color: #fc2028;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #5c5c5c;
+
+    &:hover {
+      color: #5b4295;
+
+      & .contact__text {
+        &::after {
+          background-color: #5b4295;
+        }
+      }
+    }
+  }
+
+
+  &__email {
+    text-decoration: none;
+    color: #5c5c5c;
+    font-weight: 700;
+
+    &:hover {
+      color: #5b4295;
+      text-decoration: underline;
+    }
   }
 }
