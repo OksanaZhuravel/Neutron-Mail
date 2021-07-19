@@ -1,13 +1,90 @@
 @import "mix.less";
 
 .privacy {
-  &__link {}
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+  position: relative;
 
-  &__text {}
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1399px;
+    height: 1px;
+    background-color: #b9b9b9;
+  }
 
-  &__title {}
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 1400px;
+    height: 1px;
+    background-color: #b9b9b9;
+  }
 
-  &__txt {}
+  &__text {
+    margin: 0 0 38px 0;
+    font-size: 29px;
+    line-height: 37px;
+    color: #7c7c7c;
+  }
 
-  &__wrap {}
+  &__title {
+    margin: 25px 0 5px 0;
+    font-size: 36px;
+    line-height: 30px;
+    color: #535353;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 0 83px 0;
+  }
+
+  &__link {
+    display: block;
+    height: 56px;
+    border-radius: 28px;
+    font-size: 18px;
+    line-height: 56px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      color: #f65151;
+    }
+  }
+
+  &__txt {
+    font-weight: 700;
+  }
+}
+
+.icon {
+  &-upload-cloud {
+    margin: 0 51px 0 0;
+    width: 246px;
+    background: linear-gradient(to right, #636a91, #5f316b);
+    background-color: #5f2966;
+  }
+
+  &-dollar {
+    width: 166px;
+    background: linear-gradient(to right, #36b8e0, #5e7bea);
+    background-color: #5e7bea;
+  }
 }

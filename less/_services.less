@@ -30,8 +30,20 @@
   }
 
   &__title {
-    margin: 22px 60px 5px 0;
+    margin: 22px 5px 5px 0;
     line-height: 26px;
     color: #7a7a7a;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -22px;
+      right: -17px;
+      width: 1px;
+      height: 441px;
+      background-color: #b9b9b9;
+    }
   }
 }

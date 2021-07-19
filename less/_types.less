@@ -5,6 +5,22 @@
   max-width: 455px;
   min-width: 240px;
 
+  &:hover {
+    & .types__title {
+      color: #f65151;
+
+      &::after {
+        transform: scale(0.8);
+      }
+    }
+
+    & .types__text,
+    & .types__subtitle {
+      color: #5f2966;
+      transform: scale(1.2);
+
+    }
+  }
 
   &__title {
     margin: 20px 0 3px 0;

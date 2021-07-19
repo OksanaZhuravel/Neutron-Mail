@@ -1,11 +1,52 @@
 @import "mix.less";
 
 .blog {
-  &__carousel {}
+  align-self: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 0 126px 364px;
 
-  &__name {}
+  &__carousel {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 25px 0 0;
+  }
 
-  &__text {}
+  &__name {
+    position: relative;
+    margin: 0 0 0 5px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #727272;
 
-  &__wrap {}
+    &::before {
+      content: "-";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -10px;
+      font-size: 24px;
+      line-height: 31px;
+      font-weight: 400;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 31px;
+    font-style: italic;
+    color: #101010;
+
+    &:hover {
+      color: #f65151;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-flow: column wrap;
+    font-family: 'arabic', Arial, sans-serif;
+  }
 }

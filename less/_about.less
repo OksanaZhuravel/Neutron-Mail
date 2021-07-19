@@ -1,11 +1,69 @@
 @import "mix.less";
 
 .about {
-  &__item {}
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
 
-  &__link {}
+  &__fon {
+    background-color: #ffffff;
+    background-image: url(../img/about__fon1.png),
+      url(../img/about__fon.png);
+    background-size: 100%, 578px 670px;
+    background-repeat: no-repeat;
+    background-position: 0 116px, 952px 0;
+  }
 
-  &__text {}
+  &__wrap {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+  }
 
-  &__title {}
+  &__links {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 31px 0 242px 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 0 7px 0 7px;
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    width: 180px;
+    height: 55px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &--appstore {
+      background-image: url("../img/about_app.png");
+    }
+
+    &--googlepay {
+      background-image: url("../img/about_google.png");
+    }
+  }
+
+  &__text {
+    text-align: right;
+    max-width: 460px;
+    font-size: 16px;
+  }
+
+  &__title {
+    margin: 0 0 20px 0;
+    font-size: 36px;
+    color: #535353;
+  }
 }
