@@ -29,16 +29,6 @@
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'awesome';
-    src: url('../font/awesome.svg?19085265#awesome') format('svg');
-  }
-}
-*/
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: "awesome";
@@ -102,83 +92,6 @@
 /*
    Animation example, for spinners
 */
-.animate-spin {
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
-  display: inline-block;
-}
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@-o-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@-ms-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
 .icon-login:before {
   content: '\e800';
 }
@@ -369,6 +282,7 @@ input[type="radio"].visually-hidden {
 }
 .header__list:hover {
   font-weight: 700;
+  color: #5f2966;
 }
 .header__list:active {
   font-weight: 700;
@@ -533,6 +447,7 @@ input[type="radio"].visually-hidden {
 .nav__list {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -542,7 +457,17 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 .nav__item--sing {
+  display: block;
+  width: 94px;
+  height: 40px;
+  background-color: #582c7e;
+  background: linear-gradient(to right, #583385, #616ec4);
+  border-radius: 20px;
+  box-sizing: border-box;
   margin-right: 0;
+}
+.nav__item--sing:hover .nav__sign {
+  display: flex;
 }
 .nav__item--last {
   margin-right: 75px;
@@ -550,28 +475,120 @@ input[type="radio"].visually-hidden {
 .nav__item--user {
   margin-right: 45px;
 }
+.nav__item--user:hover .nav__log {
+  display: flex;
+}
 .nav__link {
+  width: 100%;
+  display: block;
   font-size: 16px;
   line-height: 56px;
   color: #454545;
   text-decoration: none;
   border-bottom: 2px solid transparent;
 }
+.nav__link:hover {
+  border-bottom: 2px solid #5b4295;
+}
+.nav__link--sing {
+  margin: -8px 0 0 0;
+}
+.nav__link--sing:hover {
+  border-bottom: 2px solid transparent;
+}
 .nav__text {
   font-weight: 700;
+}
+.nav__text--sing {
+  color: #ffffff;
 }
 .nav__user {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 .nav__log {
   display: none;
+  position: absolute;
+  top: 50px;
+  left: -85px;
+  margin: 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #9c83d6;
+  background: linear-gradient(to right, #b288e6, #5c649b);
 }
 .nav__sign {
   display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  margin: 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #9c83d6;
+  background: linear-gradient(to right, #5c649b, #b288e6);
+}
+.nav__form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  list-style: none;
+}
+.nav__style {
+  box-sizing: border-box;
+  max-width: 150px;
+  height: 22px;
+  border: 2px solid #f137a6;
+  margin: 10px 0 10px 0;
+  outline: none;
+}
+.nav__style::placeholder {
+  font-family: 'titillium', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #959393;
+}
+.nav__style:hover {
+  border: 2px solid #7c054a;
+}
+.nav__style:hover::placeholder {
+  font-family: 'titillium', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #959393;
+}
+.nav__new {
+  display: block;
+  color: #454545;
+}
+.nav__new--text {
+  line-height: 20px;
+}
+.nav__btn {
+  text-decoration: none;
+  display: block;
+  width: 100px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 40px #f137a6 inset, 0 0 0 0 #f137a6;
+  transition: 0.15s ease-in-out;
+}
+.nav__btn:hover {
+  box-shadow: 0 0 10px 0 #f137a6 inset, 0 0 10px 4px #f137a6;
+  color: #f137a6;
+}
+.icon-login:hover {
+  border-bottom: 2px solid transparent;
+}
+.icon-login::before {
+  color: #582c7e;
 }
 .menu input[type="checkbox"]:checked ~ .navigation__list--mobily {
   visibility: visible;
@@ -928,6 +945,7 @@ input[type="radio"].visually-hidden {
   width: 11px;
   height: 11px;
   opacity: 0.3;
+  box-sizing: border-box;
   border: 2px solid #ffffff;
   background-color: #101010;
   text-decoration: none;
@@ -1075,7 +1093,7 @@ input[type="radio"].visually-hidden {
 .contact__list {
   list-style: none;
   padding: 0;
-  margin: 100px 0 108px 0;
+  margin: 100px 0 40px 0;
   color: #5c5c5c;
   text-align: end;
   z-index: 3;
@@ -1174,18 +1192,30 @@ input[type="radio"].visually-hidden {
 .footer__fon {
   position: relative;
 }
+.footer__fon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 853px;
+  width: 1px;
+  height: 316px;
+  background-color: #b9b9b9;
+  z-index: 3;
+}
 .footer__fon::before {
   content: "";
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 447px;
+  min-height: 380px;
   opacity: 0.56;
   position: absolute;
   bottom: 0;
   right: 0;
+  background-color: #342be7;
   background-image: url(../img/footer__fon.png);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 0;
   z-index: 0;
