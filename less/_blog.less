@@ -6,7 +6,7 @@
   flex-flow: row nowrap;
   justify-content: center;
   max-width: 600px;
-  margin: 0 0 126px 364px;
+  margin: 10px;
 
   &__carousel {
     display: flex;
@@ -34,8 +34,8 @@
   }
 
   &__text {
-    font-size: 24px;
-    line-height: 31px;
+    font-size: 14px;
+    line-height: 22px;
     font-style: italic;
     color: #101010;
 
@@ -48,5 +48,27 @@
     display: flex;
     flex-flow: column wrap;
     font-family: 'arabic', Arial, sans-serif;
+  }
+}
+
+
+@media (min-width: 650px) {
+  .blog {
+    margin: 0 0 100px 100px;
+
+    &__text {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 1088px) {
+  .blog {
+    margin: 0 0 126px 364px;
+
+    &__text {
+      font-size: 24px;
+      line-height: 31px;
+    }
   }
 }

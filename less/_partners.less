@@ -1,7 +1,7 @@
 @import "mix.less";
 
 .partners {
-  display: flex;
+  display: none;
   flex-flow: row;
   justify-content: flex-start;
   width: 100%;
@@ -19,5 +19,17 @@
   &__link {
     display: block;
     width: 165px;
+  }
+}
+
+@media (min-width: 650px) {
+  .partners {
+    display: flex;
+  }
+}
+
+@media (min-width: 1088px) {
+  .partners {
+    display: flex;
   }
 }

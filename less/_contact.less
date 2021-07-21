@@ -2,32 +2,18 @@
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-between;
 
   &__list {
     list-style: none;
     padding: 0;
-    margin: 100px 0 40px 0;
+    margin: 10px 20px 10px 0;
     color: #5c5c5c;
     text-align: end;
     z-index: 3;
 
     &--general {
-      margin-left: 120px;
-      margin-right: 414px;
       text-align: left;
-    }
-
-    &--company {
-      margin-right: 113px;
-    }
-
-    &--legal {
-      margin-right: 94px;
-    }
-
-    &--mail {
-      margin-right: 427px;
     }
   }
 
@@ -116,6 +102,47 @@
     &:hover {
       color: #5b4295;
       text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 1088px) {
+  .contact {
+    justify-content: center;
+
+    &__list {
+      margin: 100px 0 40px 0;
+
+      &--general {
+        margin-left: 120px;
+        margin-right: 414px;
+      }
+
+      &--company {
+        margin-right: 113px;
+      }
+
+      &--legal {
+        margin-right: 94px;
+      }
+
+      &--mail {
+        margin-right: 427px;
+      }
+    }
+
+    &__text {
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: -10px;
+        width: 4px;
+        height: 4px;
+        background-color: #5c5c5c;
+        border-radius: 50%;
+      }
     }
   }
 }

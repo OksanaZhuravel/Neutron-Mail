@@ -12,7 +12,7 @@
   &__link {
     text-decoration: none;
     display: block;
-    width: 130px;
+    width: 50px;
   }
 
   &__list {
@@ -20,7 +20,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    width: 974px;
+    width: 100%;
     height: 92px;
     opacity: 0.76;
     background-size: contain;
@@ -34,16 +34,48 @@
     line-height: 26px;
     color: #7a7a7a;
     position: relative;
+    font-size: 7px;
+  }
+}
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: -22px;
-      right: -17px;
-      width: 1px;
-      height: 441px;
-      background-color: #b9b9b9;
+
+@media (min-width: 650px) {
+  .services {
+    &__link {
+      width: 70px;
+    }
+
+    &__list {
+      width: 100%;
+      height: 92px;
+    }
+  }
+}
+
+@media (min-width: 1088px) {
+  .services {
+    &__link {
+      width: 130px;
+    }
+
+    &__list {
+      width: 974px;
+      height: 92px;
+    }
+
+    &__title {
+      font-size: 14px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -22px;
+        right: -17px;
+        width: 1px;
+        height: 441px;
+        background-color: #b9b9b9;
+      }
     }
   }
 }
