@@ -6,30 +6,25 @@
   justify-content: flex-start;
   width: 100%;
 
+  @media (min-width: 650px) {
+    display: flex;
+  }
 
   &--fon {
-    margin: 0 0 61px 21px;
+    margin: 0 0 61px 0;
     height: 66px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-image: url("../img/partners__fon.png");
+
+    @media (min-width: 1800px) {
+      margin: 0 0 61px 21px;
+    }
   }
 
   &__link {
     display: block;
     width: 165px;
-  }
-}
-
-@media (min-width: 650px) {
-  .partners {
-    display: flex;
-  }
-}
-
-@media (min-width: 1088px) {
-  .partners {
-    display: flex;
   }
 }

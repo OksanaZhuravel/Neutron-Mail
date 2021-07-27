@@ -1,15 +1,20 @@
 @import "mix.less";
 
 .body {
-  width: 320px;
-  // width: 1800px;
+  min-width: 320px;
+  max-width: 1800px;
   margin: 0 auto;
+  padding: 15px;
   box-sizing: border-box;
   font-family: 'titillium', Arial, sans-serif;
   .mixs (14px, 22px, 400);
   letter-spacing: 0.01em;
   color: #959393;
   background-color: #ffffff;
+
+  @media (min-width: 650px) {
+    padding: 0;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active),

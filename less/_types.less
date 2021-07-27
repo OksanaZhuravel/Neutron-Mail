@@ -17,8 +17,15 @@
     & .types__text,
     & .types__subtitle {
       color: #5f2966;
-      transform: scale(1.2);
+    }
 
+    @media (min-width: 650px) {
+
+      & .types__text,
+      & .types__subtitle {
+        transform: scale(1.2);
+
+      }
     }
   }
 
@@ -27,6 +34,17 @@
     font-size: 20px;
     line-height: 27px;
     color: #555555;
+
+    @media (min-width: 650px) {
+      margin: 15px 0 3px 0;
+      font-size: 25px;
+    }
+
+    @media (min-width: 1088px) {
+      margin: 20px 0 3px 0;
+      font-size: 30px;
+      line-height: 37px;
+    }
 
     &::after {
       content: "";
@@ -55,6 +73,19 @@
         top: 5px;
         background-image: url(../img/types2.png);
       }
+
+      @media (min-width: 1800px) {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: -94px;
+          left: -33px;
+          width: 1px;
+          height: 210px;
+          background-color: #b9b9b9;
+        }
+      }
     }
 
     &--anonymous {
@@ -71,53 +102,15 @@
     max-width: 200px;
     margin: 0;
     font-size: 18px;
+
+    @media (min-width: 650px) {
+      max-width: 100%;
+    }
   }
 
   &__text {
     text-align: left;
     margin: 34px 0 0 0;
     width: 80%;
-  }
-}
-
-
-@media (min-width: 650px) {
-  .types {
-    &__title {
-      margin: 15px 0 3px 0;
-      font-size: 25px;
-      line-height: 27px;
-    }
-
-    &__subtitle {
-      max-width: 100%;
-    }
-  }
-}
-
-@media (min-width: 1088px) {
-  .types {
-    &__title {
-      margin: 20px 0 3px 0;
-      font-size: 30px;
-      line-height: 37px;
-
-      &--encryption {
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          top: -94px;
-          left: -33px;
-          width: 1px;
-          height: 210px;
-          background-color: #b9b9b9;
-        }
-      }
-    }
-
-    &__subtitle {
-      max-width: 100%;
-    }
   }
 }

@@ -9,11 +9,21 @@
   &__fon {
     position: relative;
     background-color: #ffffff;
-    background-image: url(../img/about__fon.png);
-    background-size: 50%;
     background-repeat: no-repeat;
-    background-position: right bottom;
-    z-index: 0;
+
+    @media (min-width: 650px) {
+      background-image: url(../img/about__fon.png);
+      background-size: 50%;
+      background-position: right bottom;
+      z-index: 0;
+    }
+
+    @media (min-width: 1800px) {
+      background-image: url(../img/about__fon1.png),
+        url(../img/about__fon.png);
+      background-size: 100%, 578px 670px;
+      background-position: 0 116px, 952px 0;
+    }
   }
 
   &__wrap {
@@ -27,6 +37,14 @@
     flex-flow: row wrap;
     margin: 31px 0;
     padding: 0;
+
+    @media (min-width: 650px) {
+      margin: 31px 0 200px 0;
+    }
+
+    @media (min-width: 1088px) {
+      margin: 31px 0 242px 0;
+    }
   }
 
   &__item {
@@ -43,6 +61,16 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     margin: 5px 0;
+
+    @media (min-width: 650px) {
+      width: 160px;
+      height: 50px;
+    }
+
+    @media (min-width: 1088px) {
+      width: 180px;
+      height: 55px;
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -61,6 +89,10 @@
     text-align: right;
     max-width: 460px;
     font-size: 12px;
+
+    @media (min-width: 650px) {
+      font-size: 16px;
+    }
   }
 
   &__title {
@@ -68,49 +100,8 @@
     font-size: 30px;
     color: #535353;
     line-height: 34px;
-  }
-}
 
-
-@media (min-width: 650px) {
-  .about {
-    &__links {
-      margin: 31px 0 200px 0;
-    }
-
-    &__link {
-      width: 160px;
-      height: 50px;
-    }
-
-    &__text {
-      font-size: 16px;
-    }
-  }
-}
-
-@media (min-width: 1088px) {
-  .about {
-    &__fon {
-      background-color: #ffffff;
-      background-image: url(../img/about__fon1.png),
-        url(../img/about__fon.png);
-      background-size: 100%, 578px 670px;
-      background-repeat: no-repeat;
-      background-position: 0 116px, 952px 0;
-    }
-
-    &__link {
-      width: 180px;
-      height: 55px;
-    }
-
-    &__links {
-      margin: 31px 0 242px 0;
-    }
-
-    &__title {
-      margin: 0 0 20px 0;
+    @media (min-width: 1088px) {
       font-size: 36px;
     }
   }

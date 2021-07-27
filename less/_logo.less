@@ -3,10 +3,16 @@
 .logo {
   display: flex;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 10px;
   font-weight: 700;
   letter-spacing: 0.002em;
+  order: 2;
+
+  @media (min-width: 650px) {
+    line-height: 14px;
+    order: 1;
+  }
 
   &:hover {
     & .logo__text {
@@ -32,18 +38,5 @@
 
   &__title {
     color: #858688;
-  }
-}
-
-@media (min-width: 650px) {
-  .logo {
-    font-size: 25px;
-  }
-}
-
-@media (min-width: 1088px) {
-  .logo {
-    font-size: 30px;
-    line-height: 14px;
   }
 }

@@ -8,6 +8,14 @@
   max-width: 600px;
   margin: 10px;
 
+  @media (min-width: 650px) {
+    margin: 0 0 100px 100px;
+  }
+
+  @media (min-width: 1088px) {
+    margin: 0 0 126px 364px;
+  }
+
   &__carousel {
     display: flex;
     flex-flow: column wrap;
@@ -39,6 +47,15 @@
     font-style: italic;
     color: #101010;
 
+    @media (min-width: 650px) {
+      font-size: 20px;
+    }
+
+    @media (min-width: 1088px) {
+      font-size: 24px;
+      line-height: 31px;
+    }
+
     &:hover {
       color: #f65151;
     }
@@ -48,27 +65,5 @@
     display: flex;
     flex-flow: column wrap;
     font-family: 'arabic', Arial, sans-serif;
-  }
-}
-
-
-@media (min-width: 650px) {
-  .blog {
-    margin: 0 0 100px 100px;
-
-    &__text {
-      font-size: 20px;
-    }
-  }
-}
-
-@media (min-width: 1088px) {
-  .blog {
-    margin: 0 0 126px 364px;
-
-    &__text {
-      font-size: 24px;
-      line-height: 31px;
-    }
   }
 }

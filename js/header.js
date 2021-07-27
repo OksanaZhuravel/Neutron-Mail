@@ -14,3 +14,11 @@
 //     link.classList.add("header__items--hover");
 //   }
 // }
+
+//Проверить!!!!
+
+// let btn = document.querySelector('.menu-btn')
+
+// btn.addEventListener('click', function () {
+//   this.classList.toggle('is-active')
+// })
