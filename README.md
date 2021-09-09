@@ -15,4 +15,4 @@ Mobile first для экранов max 320px
 Существует версия для экранов более 650px и 1088px и
 версия dekstop 1800px (по макету).
 
-Опубликованный проект с помощью github по ссылке:
+Опубликованный проект с помощью github по ссылке: https://oksanazhuravel.github.io/NeutronMail-portfolio/
