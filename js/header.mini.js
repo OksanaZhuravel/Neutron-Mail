@@ -1,0 +1,1 @@
+let account=document.querySelector(".header__account"),link=account.querySelectorAll(".header__items"),linkElem=null,elem=function(e){e.preventDefault(),linkElem&&linkElem.classList.contains("header__items--hover"),(linkElem=e.currentTarget).classList.toggle("header__items--hover")};for(i=0;i<link.length;i++)link[i].addEventListener("click",elem);

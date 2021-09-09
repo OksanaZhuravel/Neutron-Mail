@@ -1,24 +1,19 @@
-// // let head = document.querySelector(".header__account");
-// // let link = document.querySelectorAll(".header__items");
+let account = document.querySelector('.header__account');
+let link = account.querySelectorAll('.header__items');
+// link.forEach(function (value) {
+//   console.log(value);
+// });
+let linkElem = null;
+let elem = function (evt) {
+  evt.preventDefault();
+  console.log('click');
 
-// // // let item = head.querySelector("header__items");
-// // link.onclick("click", function (evt) {
-// //   evt.preventDefault();
-// //   console.log("click");
-// //   cl();
-// // });
-// function cl() {
-//   if (link.classList.contains("header__items--hover")) {
-//     link.classList.remove("header__items--hover");
-//   } else {
-//     link.classList.add("header__items--hover");
-//   }
-// }
-
-//Проверить!!!!
-
-// let btn = document.querySelector('.menu-btn')
-
-// btn.addEventListener('click', function () {
-//   this.classList.toggle('is-active')
-// })
+  if (linkElem) {
+    linkElem.classList.contains('header__items--hover');
+  }
+  linkElem = evt.currentTarget;
+  linkElem.classList.toggle('header__items--hover');
+};
+for (i = 0; i < link.length; i++) {
+  link[i].addEventListener('click', elem);
+}

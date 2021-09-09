@@ -1,80 +1,14 @@
-// .menu {
-//   input[type="checkbox"]:checked~.menu__label>span {
-//     transform: rotate(45deg);
-//   }
-
-//   input[type="checkbox"]:checked~.menu__label>span::before {
-//     top: 0;
-//     transform: rotate(0);
-//   }
-
-//   input[type="checkbox"]:checked~.menu__label>span::after {
-//     top: 0;
-//     transform: rotate(90deg);
-//   }
-
-//   &__label {
-//     display: block;
-//     position: relative;
-//     margin: 0 0 0 5px;
-//   }
-
-//   input[type="checkbox"]:checked~.nav__list--mobily {
-//     visibility: visible;
-//     left: 0;
-//     // background-color: transparent;
-//     // background: linear-gradient(to left, #a0a9cf, #bb72ce);
-//     // height: auto;
-//   }
-
-//   &__input {
-//     visibility: hidden;
-//   }
-
-//   &__btn,
-//   &__btn::before,
-//   &__btn::after {
-//     display: block;
-//     position: absolute;
-//     top: -14px;
-//     left: 44px;
-//     width: 30px;
-//     height: 4px;
-//     background-color: #5f2966;
-//     background: linear-gradient(to right, #636c93, #5f316b);
-//     transition-duration: .25s;
-//   }
-
-//   &__btn {
-//     &::before {
-//       content: '';
-//       top: -8px;
-//       left: 0;
-//     }
-
-//     &::after {
-//       content: '';
-//       top: 8px;
-//       left: 0;
-//     }
-//   }
-// }
-
-
-// @media (min-width: 650px) {
-//   .menu {
-//     &__label {
-//       display: none;
-//     }
-//   }
-// }
-
-// @media (min-width: 1088px) {}
-input[type="checkbox"]:checked~.nav__mobily {
+input[type="checkbox"]:checked~.nav__wrap {
   visibility: visible;
   left: 0;
+  height: auto;
   background-color: transparent;
-  background: linear-gradient(to left, #a0a9cf, #bb72ce);
+  background: linear-gradient(to left, #d2d8f3, #e0b6eb);
+
+  @media (min-width: 650px) {
+    background-color: transparent;
+    background: none;
+  }
 }
 
 .menu {
@@ -84,9 +18,9 @@ input[type="checkbox"]:checked~.nav__mobily {
   &__btn::after {
     position: absolute;
     display: block;
-    top: 10px;
-    left: 13px;
-    width: 30px;
+    top: 25px;
+    left: 15px;
+    width: 35px;
     height: 4px;
     background-color: #5f2966;
     background: linear-gradient(to right, #636c93, #5f316b);
@@ -110,7 +44,7 @@ input[type="checkbox"]:checked~.nav__mobily {
   &__input {
     visibility: hidden;
 
-    &:checked~.nav__list--mobily {
+    &:checked~.nav__mobily {
       visibility: visible;
       left: 0;
       background-color: transparent;
